@@ -1,3 +1,7 @@
+<?php
+include 'funcs.php';
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,10 +15,21 @@
         <h1>high power tools for HTML</h1>
     </header>
     <main>
-        <p>You can build modern uesr intrefaces with the </p>
-        <button>
-            Learn more
-        </button>
+        <p>You can build modern user interfaces with the simplicity and power of hypertext</p>
+        <form hx-post="https://sakky.fi/fi">
+            <label for="note">Your note</label>
+            <input type="text" id="note" name="note">
+            <button type="submit">Save Button</button>
+        </form>
+        <?php // generateList(); ?>
+        <?php include 'info.php'; ?>
+        <!-- <button
+            hx-get="info.php"
+            hx-trigger="mouseenter[ctrlKey] once, Click one"
+            hx-target="main"
+            hx-swap="beforeend"
+            Learn More</button>
+        -->
     </main>
 </body>
 </html>
